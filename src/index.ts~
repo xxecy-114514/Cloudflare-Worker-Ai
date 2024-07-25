@@ -1,0 +1,8 @@
+export default {
+	 async fetch(request, env) {
+		const ai = new Ai(env.AI);
+		const input = { prompt: "What's the origin of the phrase 'Hello, World'" };
+		const output = await ai.run('@cf/meta/llama-2-7b-chat-int8', input );
+		return new Response(JSON.stringify(output));
+},
+};
