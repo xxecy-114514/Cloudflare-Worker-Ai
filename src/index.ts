@@ -93,6 +93,7 @@ export default {
       <option value="@hf/thebloke/deepseek-coder-6.7b-instruct-awq">deepseek-coder-6.7b-instruct-awq</option>
       <option value="@cf/meta/llama-3.1-8b-instruct">llama-3.1-8b-instruct</option>
       <option value="@cf/qwen/qwen1.5-14b-chat-awq">qwen1.5-14b-chat-awq</option>
+      <option value="@cf/google/gemma-7b-it-lora">gemma-7b-it-lora</option>
     </select>
     <label for="question">Input a Question:</label>
     <input type="text" id="question" name="question">
