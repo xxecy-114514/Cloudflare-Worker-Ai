@@ -7,12 +7,11 @@ export default {
 		const formData = await request.formData();
 		const userQuestion = formData.get('question') || '';
 		const userModel = formData.get('questionModel') || '';
-    const system = formData.get('system') || '';
 
 	  // messages - chat style input
 	  let chat = {
 		messages: [
-		  { role: 'system', content: system },
+		  { role: 'system', content: "You are a helpful assistant." },
 		  { role: 'user', content: userQuestion }
 		]
 	  };
@@ -98,8 +97,6 @@ export default {
     </select>
     <label for="question">Input a Question:</label>
     <input type="text" id="question" name="question">
-    <label for="question">Input a System:</label>
-    <input type="text" id="system" name="system" value="You are a helpful assistant.">
     <input type="submit" value="Submit" id="submit-button">
   </form>
   <div id="response"></div>
